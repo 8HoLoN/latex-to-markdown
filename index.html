@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Latex to Markdown</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!--
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    -->
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        textarea {
+            width: 49%;
+            height: 40%;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <textarea id="latex" rows="5"
+        cols="33">\mathcal{W}(A,f) = (T,\bar{f}) \\ \therefore \mathcal{W}(A,f) = (T,\bar{f})</textarea>
+    <textarea id="md" rows="5" cols="33"></textarea>
+    <br>
+    <img src="">
+    <script>
+        const baseUrl = `https://latex.codecogs.com/gif.latex?`;
+
+        document.querySelector('#latex').addEventListener('input', e => {
+            // e.currentTarget.value
+            displayFormula();
+        })
+
+        /*
+            <\\>  : breakline
+            <\ >  : space
+        //*/
+        // decodeURI
+        // decodeURIComponent
+        // encodeURI
+        // encodeURIComponent
+        const displayFormula = () => {// gif png pdf swf emf svg 
+            let latex = document.querySelector('#latex').value;// .textContent;
+            latex = `\\\\ ${latex}`;
+            //latex = latex.replace(/ /g," \\ "); handle multiple spaces
+            latex = latex.replace(/\n/g, " \\\\ ");
+            //console.log(latex);
+            const latexEncoded = encodeURIComponent(latex);
+            const link = `${baseUrl}${latexEncoded}`;
+            document.querySelector('img').src = link;
+
+            const md = `[![${latex}](${link})](#_)`;
+            document.querySelector('#md').value = md;
+        }
+        displayFormula();
+    </script>
+</body>
+
+</html>
