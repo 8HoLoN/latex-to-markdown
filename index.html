@@ -37,24 +37,39 @@
             margin-inline-end: initial;
             _font-weight: initial;
         }
+
+        a:hover {
+            opacity: .8;
+        }
     </style>
 </head>
 
 <body>
-    <div style="display: table;width: 100%;">
-        <div style="display: table-cell;width: 50%;">
-            <h1>Latex</h1>
-            <textarea id="latex" rows="5"
-                cols="33">\mathcal{W}(A,f) = (T,\bar{f}) \\ \therefore \mathcal{W}(A,f) = (T,\bar{f})</textarea>
+    <header style="padding: 8px;
+    background-image: linear-gradient(to right, #5f9ec0, #5a9fb9, #599fb1, #5b9fa8, #5f9ea0); display:flex;
+    flex-direction: row; align-items: center;">
+        <h1 style="font-size:medium;">Online Converter & Editor - Latex math notation to Markdown</h1>
+        <a style="margin-left:auto;" href="https://github.com/8HoLoN/latex-to-markdown" target="_blank" title="GitHub">
+            <img style="height:24px;" src="./github-icon.svg" alt="github-icon">
+        </a>
+    </header>
+    <main>
+        <div style="display: table;width: 100%;">
+            <div style="display: table-cell;width: 50%;">
+                <h1>Latex</h1>
+                <textarea id="latex" rows="5"
+                    cols="33">\mathcal{W}(A,f) = (T,\bar{f}) \\ \therefore \mathcal{W}(A,f) = (T,\bar{f})</textarea>
+            </div>
+            <div style="display: table-cell;width: 50%;">
+                <h1>Markdown</h1>
+                <textarea id="md" rows="5" cols="33"></textarea>
+            </div>
         </div>
-        <div style="display: table-cell;width: 50%;">
-            <h1>Markdown</h1>
-            <textarea id="md" rows="5" cols="33"></textarea>
-        </div>
-    </div>
 
-    <h1>Render</h1>
-    <img style="margin: 10px;" src="">
+        <h1>Render</h1>
+        <img id="render" style="margin: 10px;" src="">
+    </main>
+
     <script>
         const baseUrl = `https://latex.codecogs.com/gif.latex?`;
 
@@ -79,7 +94,7 @@
             //console.log(latex);
             const latexEncoded = encodeURIComponent(latex);
             const link = `${baseUrl}${latexEncoded}`;
-            document.querySelector('img').src = link;
+            document.querySelector('#render').src = link;
 
             const md = `[![${latex}](${link})](#_)`;
             document.querySelector('#md').value = md;
