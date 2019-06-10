@@ -6,9 +6,10 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Latex to Markdown</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    
+
     <meta name="title" content="Online Converter & Editor - Latex math notation to Markdown">
-    <meta name="description" content="Convert & Edit online your latex mathematical notation formulae into images ready to be embeded in your markdown.">
+    <meta name="description"
+        content="Convert & Edit online your latex mathematical notation formulae into images ready to be embeded in your markdown.">
     <!--
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
@@ -21,22 +22,39 @@
         }
 
         textarea {
-            width: 49%;
+            width: calc(100% - 2px);
+            padding: 0;
             height: 40%;
             display: inline-block;
+        }
+
+        h1 {
+            display: block;
+            _font-size: initial;
+            margin-block-start: initial;
+            margin-block-end: initial;
+            margin-inline-start: initial;
+            margin-inline-end: initial;
+            _font-weight: initial;
         }
     </style>
 </head>
 
 <body>
-    <h1>Latex</h1>
-    <textarea id="latex" rows="5"
-        cols="33">\mathcal{W}(A,f) = (T,\bar{f}) \\ \therefore \mathcal{W}(A,f) = (T,\bar{f})</textarea>
-    <h1>Markdown</h1>
-    <textarea id="md" rows="5" cols="33"></textarea>
-    <br>
+    <div style="display: table;width: 100%;">
+        <div style="display: table-cell;width: 50%;">
+            <h1>Latex</h1>
+            <textarea id="latex" rows="5"
+                cols="33">\mathcal{W}(A,f) = (T,\bar{f}) \\ \therefore \mathcal{W}(A,f) = (T,\bar{f})</textarea>
+        </div>
+        <div style="display: table-cell;width: 50%;">
+            <h1>Markdown</h1>
+            <textarea id="md" rows="5" cols="33"></textarea>
+        </div>
+    </div>
+
     <h1>Render</h1>
-    <img src="">
+    <img style="margin: 10px;" src="">
     <script>
         const baseUrl = `https://latex.codecogs.com/gif.latex?`;
 
