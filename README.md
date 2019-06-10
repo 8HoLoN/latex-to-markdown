@@ -6,4 +6,4 @@ Convert latex notation to ready to be embeded markdown
 go here : https://8holon.github.io/latex-to-markdown/
 
 # Credits
-* Built over the [latex.codecogs.com](https://latex.codecogs.com) services.
+* Built over the [latex.codecogs.com](https://latex.codecogs.com) web services.
