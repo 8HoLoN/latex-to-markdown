@@ -44,16 +44,16 @@
     </style>
 </head>
 
-<body>
+<body style="display: flex;flex-flow: column;">
     <header style="padding: 8px;
     background-image: linear-gradient(to right, #5f9ec0, #5a9fb9, #599fb1, #5b9fa8, #5f9ea0); display:flex;
-    flex-direction: row; align-items: center;">
+    flex-direction: row; align-items: center; flex: 0 1 auto;">
         <h1 style="font-size:medium;">Online Converter & Editor - Latex math notation to Markdown</h1>
         <a style="margin-left:auto;" href="https://github.com/8HoLoN/latex-to-markdown" target="_blank" title="GitHub">
             <img style="height:24px;" src="./github-icon.svg" alt="github-icon">
         </a>
     </header>
-    <main>
+    <main style="flex: 1 1 auto;">
         <div style="display: table;width: 100%;">
             <div style="display: table-cell;width: 50%;">
                 <h1>Latex</h1>
@@ -65,9 +65,11 @@
                 <textarea id="md" rows="5" cols="33"></textarea>
             </div>
         </div>
+        <div>
+            <h1>Render</h1>
+            <img id="render" style="margin: 10px;" src="">
+        </div>
 
-        <h1>Render</h1>
-        <img id="render" style="margin: 10px;" src="">
     </main>
 
     <script>
