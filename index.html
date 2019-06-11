@@ -73,7 +73,7 @@
     </main>
 
     <script>
-        const baseUrl = `https://latex.codecogs.com/gif.latex?`;
+        const baseUrl = `https://latex.codecogs.com/svg.latex?`;// gif png pdf swf emf svg 
 
         document.querySelector('#latex').addEventListener('input', e => {
             // e.currentTarget.value
@@ -88,7 +88,7 @@
         // decodeURIComponent
         // encodeURI
         // encodeURIComponent
-        const displayFormula = () => {// gif png pdf swf emf svg 
+        const displayFormula = () => {
             let latex = document.querySelector('#latex').value;// .textContent;
             latex = `\\\\ ${latex}`;
             //latex = latex.replace(/ /g," \\ "); handle multiple spaces
