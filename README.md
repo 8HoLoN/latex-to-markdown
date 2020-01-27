@@ -1,5 +1,5 @@
 # latex-to-markdown
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9LWA3PBZBJ9ZW)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9LWA3PBZBJ9ZW&custom=a1&notify_url=a2&source=a3)
 
 Convert latex notation to ready to be embeded markdown
 
