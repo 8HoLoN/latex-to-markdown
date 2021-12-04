@@ -5,9 +5,9 @@
 * [Become a backer or sponsor on Patreon.](https://www.patreon.com/8HoLoN) 
 
 # Introduction
-Convert latex notation to ready to be embeded markdown
+Convert latex notation to ready to be embedded markdown
 
-go here : https://8holon.github.io/latex-to-markdown/
+Go here : https://8holon.github.io/latex-to-markdown/
 
 # Credits
 * Author : Alexandre REMY
